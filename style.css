@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --red: #C72027;
+  --lightRed:#FF4B53;
+}
+
+button{
+    cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+  height: 750px;
+  background-image: url("./asstes/banner.jpg");
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+ header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: solid rgba(255, 255, 255, 0.295) 1px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  left: 10%;
+  transition: 0.5s all;
+  width: 80%;
+}
+header.active{
+  background-color: #282828;
+  width: 100%;
+  left: 0;
+z-index: 9999999999999;
+transition: 0.5s all;
+}
+
+
+
+ header nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+ header nav ul li {
+  margin-left: 40px;
+}
+ header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+ header nav ul li a.active {
+  color: var(--lightRed);
+}
+ header nav ul li a:hover {
+  color: var(--red);
+  transition: 0.25s all;
+}
+ header .search i {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.know_more_section {
+  margin-top: auto;
+  width: 500px;
+  background-color: #282828a1;
+  padding: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  height: fit-content;
+  margin-top: auto;
+}
+
+
+.know_more_section button {
+  background: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  border: none;
+  gap: 0 10px;
+  cursor: pointer;
+  transition: 0.25s all;
+}
+
+.know_more_section button:hover svg {
+  margin-left: 10px;
+  transition: 0.5s all;
+}
+
+.know_more_section .slider_button {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.know_more_section .slider_button button {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+.know_more_section .slider_button button:hover {
+  background-color: white;
+}
+.know_more_section .slider_button button.active {
+  width: 30px;
+  background-color: white;
+}
+
+.business_grow {
+  width: 80%;
+  margin: 100px auto;
+  display: flex;
+  gap: 20px;
+}
+.business_grow > div {
+  width: calc(50% - 20px);
+  min-height: 500px;
+  position: relative;
+}
+.business_grow .left_section .business_img {
+  width: 80%;
+  z-index: 9;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.business_grow .left_section .dots {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-0%, -50%);
+  z-index: -0.5;
+}
+.business_grow .left_section .quote {
+  position: absolute;
+  right: 0;
+  height: fit-content;
+  bottom: 0;
+  width: 220px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--red);
+  color: white;
+  z-index: 99;
+}
+.business_grow .right_section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+}
+
+.business_grow .right_section > p {
+  font-family: "Varela", sans-serif;
+}
+.business_grow .right_section .industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 0;
+}
+.business_grow .right_section .industries h2 {
+  width: 100%;
+  font-size: 21px;
+}
+
+.business_grow .right_section .industries div {
+  min-width: 50%;
+  font-weight: bold;
+  font-size: 15px;
+  opacity: 80%;
+}
+.business_grow .right_section .industries div span {
+  opacity: 50%;
+  margin-right: 10px;
+}
+
+.business_grow .right_section .industries div:not(:nth-child(8)) {
+  border-bottom: solid rgba(0, 0, 0, 0.363) 1px;
+}
+.business_grow .right_section button {
+  width: fit-content;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  color: var(--red);
+  font-weight: 600;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.business_grow .right_section button:hover svg {
+  margin-left: 10px;
+  transition: 0.5s all;
+}
+
+.expert h2 {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+}
+
+.expert .cards{
+    display: flex;
+    margin-top: 50px;
+}
+
+.expert .cards .card{
+    min-width: 25%;
+    position: relative;
+}
+.expert .cards .card img{
+    width: 100%;
+}
+.expert .cards .card div{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    font-size: 21px;
+}
+.expert .cards .card button{
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.expert .cards .card button:hover svg {
+    margin-left: 10px;
+    transition: 0.5s all;
+  }
+
+  .expert .slider_button{
+    display: flex;
+    gap: 0 8px;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  .expert .slider_button button {
+    width: 8px;
+    border: none;
+    height: 8px;
+    border-radius: 20px;
+    background-color:#c720288a;
+  }
+  .expert .slider_button .active{
+    background-color: #C72027;
+   width: 30px;
+
+  }
+  .expert .slider_button button:hover {
+    background-color: #C72027;
+  }
+
+  .read{
+    width: 80%;
+    margin:100px auto 50px auto;
+  }
+  .read h2{
+    text-align: center;
+  }
+
+  .read .cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .read .cards .card{
+    width: 31%;
+    padding: 10px 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.10000000149011612);
+  }
+  .read .cards .card .top,.read .cards .card h3{
+    padding: 0 20px;
+  }
+  .read .cards .card .top{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgb(173, 173, 173);
+  }
+  .read .cards .card .top span{
+    font-size: 27px;
+    color: var(--red);
+    margin: 0 5px;
+  }
+  .read .cards .card h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .read .cards .card img{
+    width: 100%;
+  }
+  .read .cards .card button{
+    border: none;
+    margin-left: 15px;
+    margin-top: 5px;
+    background: none;
+  }
+
+  .read button{
+    width: fit-content;
+    margin:20px auto;
+    display: flex;
+    background: none;
+    border: none;
+    color: var(--red);
+    font-weight: bold;
+  }
+
+  section{
+    display: flex;
+  }
+  section>div{
+    width: 50%;
+    height: 310px;
+    background-size: cover;
+    position: relative;
+  }
+  section .left_section{
+    background-image: url('./asstes/l1.jpg');
+}
+section .right_section{
+    background-image: url('./asstes/l2.jpg');
+}
+
+section>div>div{
+    width: 70%;
+    display: flex;
+    gap: 0 30px;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+section>div>div p{
+    font-size: 14px;
+}
+section .content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+section div div .button button{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    min-width: fit-content;
+    white-space:nowrap;
+    gap: 0px 8px;
+    color: white;
+}
+footer{
+    padding: 25px 10%;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-between;
+}
+footer .card1{
+    width: 30%;
+}
+footer .card1 div{
+    display: flex;
+    gap: 0 10px;
+    color: white;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 13px;
+}
+footer .card h3{
+    color: white;
+}
+footer .card ul{
+    padding-left:0;
+    list-style: none;
+    line-height: 35px;
+    margin-top: 20px;
+
+} 
+footer .card ul li a{
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+footer .card ul li a:hover{
+  color: var(--lightRed);
+}
+.copyrights{
+    padding: 10px;
+    width: 100%;
+    font-size: 13px;
+text-align: center;
+    background-color: #C72027;
+    color: white;
+}
